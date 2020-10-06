@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Search from "./comp/Search";
 
 class App extends React.Component {
     render() {
