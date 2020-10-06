@@ -11,7 +11,6 @@ const AboutUser = ({data, repos}) => {
                         <a href={item.html_url} target="_blank">{item.name}</a>
                     </div>
                 ))}
-
         </div>
     )
 }
