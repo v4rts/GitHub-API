@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import AboutUser from "./AboutUser";
 
 let Search = () => {
     const [data, setData] = useState({});
@@ -19,12 +20,18 @@ let Search = () => {
         const repos = await fetch(profileJson.repos_url);
         const reposJson = await repos.json();
         console.log(reposJson);
+
+        if (profileJson){
+            setData(profileJson);
+            setRepos(reposJson);
+        }
     };
 
     return(
         <div>
             <input type = "text" value = {username} onChange = {changeHandler} />
             <button type = "submit"  onClick = {submitHandler}>Search!</button>
+            <AboutUser data={data} repos={repos}/>
         </div>
     )
 }
