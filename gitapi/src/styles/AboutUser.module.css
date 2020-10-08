@@ -1,0 +1,15 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.login, .location, .repository{
+    font-family: Montserrat, sans-serif;
+}
+
+.avatar{
+    border-radius: 50%;
+
+}

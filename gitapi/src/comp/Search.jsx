@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import AboutUser from "./AboutUser";
+import styles from "../styles/Search.module.css"
 
 let Search = () => {
     const [data, setData] = useState({});
@@ -28,7 +29,7 @@ let Search = () => {
     };
 
     return(
-        <div>
+        <div className={styles.wrapper}>
             <input type = "text" value = {username} onChange = {changeHandler} />
             <button type = "submit"  onClick = {submitHandler}>Search!</button>
             <AboutUser data={data} repos={repos}/>
