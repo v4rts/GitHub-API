@@ -11,5 +11,10 @@
 
 .avatar{
     border-radius: 50%;
+    height: 100px;
+}
 
+.repowrapper{
+    display: flex;
+    flex-direction: column;
 }
