@@ -1,20 +1,88 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
 .wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
     width: 100%;
     height: 100%;
 
 }
 
 .appwrapper{
-    background: url("https://products.ls.graphics/mesh-gradients/images/49.-Soft-Peach_1.jpg");
-    padding: 0;
+    background: url("https://products.ls.graphics/mesh-gradients/images/45.-Fog_1.jpg");
     margin: 0;
+    padding : 100px;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.input{
+    width: 600px;
+    height: 75px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-around;
+    backdrop-filter: blur(5px);
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.userlog{
+    width: 600px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-around;
+    backdrop-filter: blur(5px);
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 20px;
+}
+
+.input input{
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    border-radius: 30px;
+    font-size: 18px;
+    margin-right: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+    color:#666666;
+}
+
+.input button{
+    cursor: pointer;
+    color: #666666;
+    padding: 10px 20px;
+    height: 42px;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 18px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+}
+
+.input button:hover{
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.1);
 }

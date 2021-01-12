@@ -7,6 +7,7 @@ let Search = () => {
     const [data, setData] = useState({});
     const [username, setUsername] = useState("");
     const [repos, setRepos]  = useState([]);
+    const [load, setLoad] = useState(false);
 
     let changeHandler = (input) => {
         setUsername(input.target.value);
@@ -25,16 +26,34 @@ let Search = () => {
         if (profileJson){
             setData(profileJson);
             setRepos(reposJson);
+            setLoad(true);
         }
     };
 
-    return(
-        <div className={styles.wrapper}>
-            <input type = "text" value = {username} onChange = {changeHandler} />
-            <button type = "submit"  onClick = {submitHandler}>Search!</button>
-            <AboutUser data={data} repos={repos}/>
-        </div>
-    )
+    if (load){
+        return(
+            <div className={styles.wrapper}>
+                <div className={styles.input}>
+                    <input type = "text" value = {username} onChange = {changeHandler} placeholder="Username"/>
+                    <button type = "submit"  onClick = {submitHandler}>Search!</button>
+                </div>
+                <div className={styles.userlog}>
+                    <AboutUser data={data} repos={repos}/>
+                </div>
+            </div>
+        )
+    }else{
+        return(
+            <div className={styles.wrapper}>
+                <div className={styles.input}>
+                    <input type = "text" value = {username} onChange = {changeHandler} placeholder="Username"/>
+                    <button type = "submit"  onClick = {submitHandler}>Search!</button>
+                </div>
+            </div>
+        )
+    }
+
+
 }
 
 export default Search;

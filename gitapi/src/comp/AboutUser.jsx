@@ -9,7 +9,7 @@ const AboutUser = ({data, repos}) => {
             <p className={styles.location}>{data.location}</p>
                 <div className={styles.repowrapper}>
                     {repos.map(item=> (
-                        <div key={item.name}>
+                        <div className={styles.rep} key={item.name}>
                             <a className={styles.repository} href={item.html_url} target="_blank">{item.name}</a>
                         </div>
                     ))}
