@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import AboutUser from "./AboutUser";
-import styles from "../styles/Search.module.css"
+import styles from "../styles/Search.module.css";
+import logo from "./logo.png";
 
 let Search = () => {
     const [data, setData] = useState({});
@@ -32,7 +33,11 @@ let Search = () => {
 
     if (load){
         return(
+
             <div className={styles.wrapper}>
+                <div className={styles.logocontainer}>
+                    <img src={logo}></img>
+                </div>
                 <div className={styles.input}>
                     <input type = "text" value = {username} onChange = {changeHandler} placeholder="Username"/>
                     <button type = "submit"  onClick = {submitHandler}>Search!</button>
@@ -45,6 +50,9 @@ let Search = () => {
     }else{
         return(
             <div className={styles.wrapper}>
+                <div className={styles.logocontainer}>
+                    <img src={logo}></img>
+                </div>
                 <div className={styles.input}>
                     <input type = "text" value = {username} onChange = {changeHandler} placeholder="Username"/>
                     <button type = "submit"  onClick = {submitHandler}>Search!</button>
